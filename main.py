@@ -1,3 +1,13 @@
 from mlopsProject import logger
+from mlopsProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 
-logger.info("Logging is set up and ready to use.")
+STAGE_NAME = "Data Ingestion Stage"
+
+try:
+    logger.info(f">>>>>> Stage {STAGE_NAME} started <<<<<<")
+    data_ingestion = DataIngestionTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>> Stage {STAGE_NAME} completed <<<<<<\n\nx==========x")
+except Exception as e:
+    logger.exception(e)
+    raise e
