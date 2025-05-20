@@ -1,4 +1,46 @@
-# End-to-End-MLOps-Project
+# End-to-End-MLOps-Project: Wine Quality Prediction
+
+This repository demonstrates a complete end-to-end MLOps workflow for a **Wine Quality Prediction** web application. The project covers all stages of the machine learning lifecycle, from data ingestion and validation to model training, evaluation, deployment, and CI/CD automation.
+
+## Features
+
+- **Data Ingestion:** Downloads and unzips the wine quality dataset automatically.
+- **Data Validation:** Ensures data schema and integrity before processing.
+- **Data Transformation:** Splits data into training and testing sets.
+- **Model Training:** Trains an ElasticNet regression model to predict wine quality.
+- **Model Evaluation:** Evaluates model performance and logs metrics to MLflow (integrated with DagsHub).
+- **Prediction API:** Flask web app for real-time wine quality prediction based on user input.
+- **Experiment Tracking:** Uses MLflow for experiment tracking and model registry.
+- **CI/CD Pipeline:** Automated workflows using GitHub Actions for building, testing, and deploying the application.
+- **Docker & AWS Ready:** Instructions and scripts for containerization and deployment on AWS EC2/ECR.
+
+## Tech Stack
+
+- Python (Flask, scikit-learn, pandas, numpy)
+- MLflow & DagsHub (experiment tracking)
+- GitHub Actions (CI/CD)
+- Docker (containerization)
+- AWS EC2 & ECR (cloud deployment)
+- HTML/CSS/Bootstrap (frontend)
+
+## Project Structure
+
+```
+├── config/                # YAML configuration files
+├── src/mlopsProject/      # Core Python package (pip installable)
+│   ├── pipeline/          # Training and prediction pipelines
+│   ├── utils/             # Utility functions (YAML, JSON, logging, etc.)
+│   └── ...                # Other modules
+├── research/              # Jupyter notebooks for each pipeline stage
+├── artifacts/             # Generated artifacts (data, models, logs)
+├── static/                # Static assets (CSS, JS, images)
+├── templates/             # HTML templates for Flask app
+├── app.py                 # Flask web application
+├── main.py                # Pipeline runner script
+├── requirements.txt       # Python dependencies
+├── .github/workflows/     # GitHub Actions CI/CD workflows
+└── README.md              # Project documentation
+```
 
 ## How to run?
 ### STEPS:
